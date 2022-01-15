@@ -16,5 +16,3 @@ spec:
     targetPort: 8025
   selector:
     app: mailhog
-status:
-  loadBalancer: {}

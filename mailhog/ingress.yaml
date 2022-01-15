@@ -1,12 +1,15 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: mailhog
 spec:
   rules:
   - http:
-    paths:
-    - path: /
-      backend:
-        serviceName: mailhog
-        servicePort: 8025
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mailhog
+            port:
+              number: 8025
