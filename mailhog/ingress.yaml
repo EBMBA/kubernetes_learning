@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - host: "mailhog.192.168.122.67.nip.io"
+  - host: "mailhog.nip.io"
     http:
       paths:
       - path: /
